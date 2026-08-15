@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+/backend/node_modules/
+/frontend/node_modules/
+
+# Environment Variables (CRITICAL)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build Outputs (Frontend & Backend)
+/frontend/dist/
+/frontend/build/
+build/
+dist/
+
+# Python / Machine Learning
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.pytest_cache/
+
+# User Uploads (Backend)
+/backend/uploads/
+uploads/
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
