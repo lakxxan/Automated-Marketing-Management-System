@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: mern-backend
-          image: your-dockerhub-username/mern-backend:latest
+          image: lakxxan/mern-backend:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
@@ -61,7 +61,7 @@ spec:
     spec:
       containers:
         - name: mern-frontend
-          image: your-dockerhub-username/mern-frontend:latest
+          image: lakxxan/mern-frontend:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
