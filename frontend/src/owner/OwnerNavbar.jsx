@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Bell, User } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
-import Profile from '../assets/Profile.png';
+import Profile from '../assets/profile.png';
 import API from '../api';
 // Helper to resolve backend relative avatar paths
 const resolveAvatarUrl = (val) => {
@@ -32,7 +32,7 @@ const Navbar = () => {
       try {
         const response = await API.get('/auth/profile');
         const userData = response.data;
-        
+
         setUserEmail(userData.email);
         setUserName(userData.name);
         setUserRole(userData.role);
@@ -46,19 +46,19 @@ const Navbar = () => {
           const cached = localStorage.getItem('userProfileImage');
           if (cached) setProfileImage(cached);
         }
-        
+
         // Also update localStorage for backward compatibility
         localStorage.setItem('userEmail', userData.email);
         localStorage.setItem('userName', userData.name);
         localStorage.setItem('userRole', userData.role);
-        
+
       } catch (error) {
         console.error('Failed to fetch user data:', error);
         // Fallback to localStorage if API fails
         const email = localStorage.getItem('userEmail') || 'owner@example.com';
         const name = localStorage.getItem('userName') || 'Owner';
         const role = localStorage.getItem('userRole') || 'Owner';
-        
+
         setUserEmail(email);
         setUserName(name);
         setUserRole(role);
