@@ -61,7 +61,7 @@ spec:
     spec:
       containers:
         - name: mern-frontend
-          image: lakxxan/mern-frontend:11
+          image: lakxxan/mern-frontend:19
           imagePullPolicy: Always
           ports:
             - containerPort: 80
