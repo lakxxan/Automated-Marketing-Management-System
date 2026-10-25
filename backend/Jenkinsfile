@@ -54,7 +54,7 @@ pipeline {
             git config user.email "lakshan.lr2016@gmail.com"
             git config user.name "lakxxan"
             BUILD_NUMBER=${BUILD_NUMBER}
-            sed -i "s|mern-backend:.*|mern-backend:${BUILD_NUMBER}|g" k8s/deployment.yml
+            sed -i "s|image: lakxxan/mern-backend:.*|image: lakxxan/mern-backend:${BUILD_NUMBER}|g" k8s/deployment.yml
             git add k8s/deployment.yml
             git commit -m "Update backend deployment image to version ${BUILD_NUMBER}"
             git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
