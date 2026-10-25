@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: mern-backend
-          image: lakxxan/mern-backend:latest
+          image: lakxxan/mern-backend:11
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
